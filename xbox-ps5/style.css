@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Teko:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'Teko', sans-serif;
+height: 100vh;
+overflow: hidden; 
+margin: 0;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.795);
+    width: 100%;
+    height: 100%;
+}
+
+
+.split {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+
+}
+
+.split.left {
+    left: 0;
+    background-image: url(images/ps5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 248, 255, 0.24);
+}
+
+.split.right {
+    right: 0%;
+    background-image: url(images/xb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 170, 81, 0.295);
+
+}
+
+h1 {
+    position: absolute;
+    right: 50%;
+    font-size: 4rem;
+    transform: translateX(-50%);
+    top: 20%;
+    color: rgb(208, 223, 218);
+ }
+
+ h2 {
+    position: absolute;
+    left: 50%;
+    font-size: 4rem;
+    transform: translateX(-50%);
+    top: 20%;
+    color: rgb(208, 223, 218);
+ }
+
+ .btn {
+    position: absolute;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: aliceblue;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 40%;
+    font-weight: bold;
+    border: whitesmoke solid 0.2rem;
+    padding: 1.5rem;
+    width: 15rem;
+
+ }
+
+ .split.right .btn:hover {
+    background-color: rgb(16, 138, 56);
+    border-color: rgb(16, 138, 56);
+}
+
+.split.left .btn:hover {
+    background-color: rgb(28, 98, 163);
+    border-color: rgb(28, 98, 163);
+}
+
+.hover-left .left {
+    width: 75%;
+}
+
+.hover-left .right {
+    width: 25%;
+}
+
+.hover-right .right {
+    width: 75%;
+}
+
+.hover-right .left {
+    width: 25%;
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all 1000ms ease-in-out;  
+}   
